@@ -17,7 +17,11 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
-
+  programs.lazygit.enable = true;
+  programs.zoxide.enable = true;
+  programs.fzf.enable = true;
+  programs.bat.enable = true;
+  programs.git = (pkgs.callPackage ./apps/git.nix { }).programs.git;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs;[

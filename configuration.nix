@@ -110,15 +110,11 @@
     wget
     btop
     neovim
-    git
-    kitty
     tmux
     gnupg
     gum
-    zsh
-    cargo
-    rustup
     lolcat
+    firefox
 
     #Wayland
     # wlogout
@@ -134,6 +130,8 @@
     nodejs_21
     go
     jdk21
+    cargo
+    rustup
 
     #gnome software
     gnomecast
