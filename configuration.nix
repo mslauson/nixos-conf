@@ -118,7 +118,7 @@
     gnome.gnome-software
     # gnome-extensions
     gnome-extension-manager
-    gnomeExtensions.dock-to-dock
+    gnomeExtensions.dash-to-dock
     # gnomeExtensions.dock-from-dash
   ];
 
