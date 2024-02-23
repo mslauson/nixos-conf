@@ -116,12 +116,9 @@
     gnupg
     gum
     zsh
-    nerdfonts
     cargo
     rustup
     lolcat
-    lazygit
-    lazydocker
 
     #Wayland
     # wlogout
