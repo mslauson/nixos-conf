@@ -110,6 +110,8 @@
     cargo
     rustup
     lolcat
+    lazygit
+    lazydocker
 
     #gnome software
     gnomecast
