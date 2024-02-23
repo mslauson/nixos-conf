@@ -40,7 +40,7 @@
     font = { name = "JetBrainsMono"; size = 11; };
     settings = {
       window_padding_width = 12;
-      term = xterm-256color';
+      term = xterm-256color;
       ackground_opacity = 0.97;
     };
     # keybindings = {
