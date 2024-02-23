@@ -17,7 +17,18 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
-  programs.lazygit.enable = true;
+  programs.lazygit = {
+    enable = true;
+    lightTheme = false;
+    activeBorderColor = [ "#a6e3a1" "bold" ];
+    inactiveBorderColor = [ "#cdd6f4" ];
+    optionsTextColor = [ "#89b4fa" ];
+    selectedLineBgColor = [ "#313244" ];
+    selectedRangeBgColor = [ "#313244" ];
+    cherryPickedCommitBgColor = [ "#94e2d5" ];
+    cherryPickedCommitFgColor = [ "#89b4fa" ];
+    unstagedChangesColor = [ "red" ];
+  };
   programs.zoxide.enable = true;
   programs.fzf.enable = true;
   programs.bat.enable = true;
