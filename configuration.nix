@@ -89,15 +89,7 @@
       #  thunderbird
     ];
   };
-  users.users.nkuehne = {
-    isNormalUser = true;
-    description = "Nicholas Kuehne";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-      #  thunderbird
-    ];
-  };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
