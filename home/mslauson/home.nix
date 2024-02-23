@@ -41,7 +41,9 @@
     settings = {
       window_padding_width = 12;
       term = "xterm-256color";
-      ackground_opacity = 0.97;
+      background_opacity = 0.97;
+      hide_window_decorations = 1;
+      confirm_os_window_close = 0;
     };
     # keybindings = {
     #   "ctrl+left" = "neighboring_window left";
