@@ -42,7 +42,7 @@
       window_padding_width = 12;
       term = "xterm-256color";
       background_opacity = "0.97";
-      hide_window_decorations = 1;
+      hide_window_decorations = true;
       confirm_os_window_close = 0;
     };
     # keybindings = {
