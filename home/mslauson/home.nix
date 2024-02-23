@@ -24,7 +24,7 @@
     jq
     lazygit
     lazydocker
-    jetbrains-toolbox
+    # jetbrains-toolbox
     docker-compose
     insomnia
     bitwarden
