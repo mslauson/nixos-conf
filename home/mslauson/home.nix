@@ -33,6 +33,29 @@
       };
     };
   };
+
+  programs.kitty = {
+    enable = true;
+
+    font = { name = "JetBrainsMono"; size = 11; };
+    settings = {
+      window_padding_width = 12;
+      term = xterm-256color';
+      ackground_opacity = 0.97;
+    };
+    # keybindings = {
+    #   "ctrl+left" = "neighboring_window left";
+    #   "ctrl+up" = "neighboring_window top";
+    #   "ctrl+right" = "neighboring_window right";
+    #   "ctrl+down" = "neighboring_window down";
+    #
+    #   "shift+left" = "resize_window narrower";
+    #   "shift+right" = "resize_window wider";
+    #   "shift+up" = "resize_window taller 3";
+    #   "shift+down" = "resize_window shorter 3";
+    # };
+    theme = "Catpuccin-Mocha";
+  };
   programs.zoxide.enable = true;
   programs.fzf.enable = true;
   programs.bat.enable = true;
