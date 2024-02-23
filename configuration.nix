@@ -113,6 +113,21 @@
     lazygit
     lazydocker
 
+    #Wayland
+    # wlogout
+    swayidle
+    sway-audio-idle-inhibit
+
+    ##Hyprland
+    hyprland
+    hyprpaper
+    hyprdim
+
+    # Langs
+    nodejs_21
+    go
+    jdk21
+
     #gnome software
     gnomecast
     gnome.gnome-software
