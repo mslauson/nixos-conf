@@ -85,7 +85,16 @@
     description = "Matthew Slauson";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
+      # firefox
+      #  thunderbird
+    ];
+  };
+  users.users.nkuehne = {
+    isNormalUser = true;
+    description = "Nicholas Kuehne";
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [
+      # firefox
       #  thunderbird
     ];
   };
@@ -99,6 +108,7 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    btop
     neovim
     git
     kitty
