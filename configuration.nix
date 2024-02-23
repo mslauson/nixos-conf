@@ -110,6 +110,14 @@
     cargo
     rustup
     lolcat
+
+    #gnome software
+    gnomecast
+    gnome.gnome-software
+    # gnome-extensions
+    gnome-extension-manager
+    gnomeExtensions.dock-to-dock
+    # gnomeExtensions.dock-from-dash
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
