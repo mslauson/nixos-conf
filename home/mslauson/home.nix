@@ -54,7 +54,7 @@
     #   "shift+up" = "resize_window taller 3";
     #   "shift+down" = "resize_window shorter 3";
     # };
-    theme = "Catpuccin-Mocha";
+    theme = "Catppuccin-Mocha";
   };
   programs.zoxide.enable = true;
   programs.fzf.enable = true;
