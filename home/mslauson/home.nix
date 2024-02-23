@@ -45,17 +45,12 @@
       hide_window_decorations = true;
       confirm_os_window_close = 0;
     };
-    # keybindings = {
-    #   "ctrl+left" = "neighboring_window left";
-    #   "ctrl+up" = "neighboring_window top";
-    #   "ctrl+right" = "neighboring_window right";
-    #   "ctrl+down" = "neighboring_window down";
-    #
-    #   "shift+left" = "resize_window narrower";
-    #   "shift+right" = "resize_window wider";
-    #   "shift+up" = "resize_window taller 3";
-    #   "shift+down" = "resize_window shorter 3";
-    # };
+    keybindings = {
+      "ctrl+shift+c" = "copy_to_clipboard";
+      "super+c" = "copy_to_clipboard";
+      "ctrl+shift+v" = "paste_from_clipboard";
+      "super+v" = "paste_from_clipboard";
+    };
     theme = "Catppuccin-Mocha";
   };
   programs.zoxide.enable = true;
