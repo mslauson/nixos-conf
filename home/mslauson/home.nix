@@ -71,6 +71,7 @@
 
     insomnia
     bitwarden
+    firefox
 
     #GTK
     catppuccin-gtk
