@@ -7,24 +7,24 @@
       extended = true;
       save = 25000;
     };
-    plugins = [
-      {
-        name = "zsh-autosuggestions";
-        src = pkgs.zsh-autosuggestions;
-      }
-      {
-        name = "zsh-completions";
-        src = pkgs.zsh-completions;
-      }
-      {
-        name = "zsh-syntax-highlighting";
-        src = pkgs.zsh-syntax-highlighting;
-      }
-      {
-        name = "zsh-fzf-tab";
-        src = pkgs.zsh-fzf-tab;
-      }
-    ];
+    # plugins = [
+    #   {
+    #     name = "zsh-autosuggestions";
+    #     src = pkgs.zsh-autosuggestions;
+    #   }
+    #   {
+    #     name = "zsh-completions";
+    #     src = pkgs.zsh-completions;
+    #   }
+    #   {
+    #     name = "zsh-syntax-highlighting";
+    #     src = pkgs.zsh-syntax-highlighting;
+    #   }
+    #   {
+    #     name = "zsh-fzf-tab";
+    #     src = pkgs.zsh-fzf-tab;
+    #   }
+    # ];
     # zplug = {
     #   enable = true;
     #   plugins = [
