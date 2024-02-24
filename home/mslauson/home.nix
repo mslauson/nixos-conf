@@ -17,6 +17,20 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
+
+  #GTK Config
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Catppuccin-Mocha-Compact-Peach-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "peach" ];
+        size = "compact";
+        tweaks = [ "rimless" "black" ];
+        variant = "macchiato";
+      };
+    };
+  };
   programs.lazygit = {
     enable = true;
     settings = {
