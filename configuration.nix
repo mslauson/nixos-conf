@@ -8,6 +8,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./nvidia.nix
   ];
 
   # Bootloader.
@@ -112,38 +113,7 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     btop
-    neovim
     gnupg
-    gum
-    lolcat
-    firefox
-
-    #Wayland
-    # wlogout
-    swayidle
-    sway-audio-idle-inhibit
-
-    ##Hyprland
-    hyprland
-    hyprpaper
-    hyprdim
-
-    # Langs
-    nodejs_21
-    go
-    jdk21
-    cargo
-    rustup
-    # libclang
-    # libgcc
-    gcc
-
-    #gnome software
-    gnomecast
-    gnome.gnome-software
-    # gnome-extensions
-    gnome-extension-manager
-    gnomeExtensions.dash-to-dock
     # gnomeExtensions.dock-from-dash
   ];
 

@@ -10,11 +10,7 @@
   home.homeDirectory = "/home/mslauson";
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
+  nixpkgs = { config = { allowUnfree = true; }; };
   #GTK Config
   gtk = {
     enable = true;
@@ -28,9 +24,7 @@
       };
     };
   };
-  imports = [
-    ./apps/kitty.nix
-  ];
+  imports = [ ./apps/kitty.nix ];
   programs.lazygit = {
     enable = true;
     settings = {
@@ -58,17 +52,51 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    curl
+    lshw
+    gum
+    lolcat
     jq
     lazygit
     lazydocker
-    nixfmt
-    golines
     docker-compose
 
-    insomnia
+    #Wayland
+    # wlogout
+    swayidle
+    sway-audio-idle-inhibit
+
+    ##Hyprland
+    hyprland
+    hyprpaper
+    hyprdim
+
+    neovim
     jetbrains-toolbox
+    insomnia
+
+    # Langs
+    nodejs_21
+    go
+    jdk21
+    cargo
+    rustup
+    gcc
+
+    #gnome software
+    gnomecast
+    gnome.gnome-software
+    # gnome-extensions
+    gnome-extension-manager
+    gnomeExtensions.dash-to-dock
+
+    nixfmt
+    golines
+    rnix-lsp
+
     bitwarden
     firefox
+
     steam
     discord
     heroic
