@@ -7,6 +7,7 @@
     userEmail = "matthew@slauson.io";
     signing = { key = "3AB57AD2F78683DF9E9D0659EF6F329D8D6E51C5"; };
     aliases = {
+      p = "pull";
       st = "status";
       co = "checkout";
       br = "branch";
@@ -30,7 +31,6 @@
       core = {
         editor = "nvim";
       };
-      init = { defaultBranch = "main"; };
     };
     diff-so-fancy = {
       enable = true;
