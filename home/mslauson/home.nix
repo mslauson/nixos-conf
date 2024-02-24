@@ -27,7 +27,7 @@
         accents = [ "peach" ];
         size = "compact";
         tweaks = [ "rimless" "black" ];
-        variant = "macchiato";
+        variant = "mocha";
       };
     };
   };
@@ -51,7 +51,10 @@
   programs.kitty = {
     enable = true;
 
-    font = { name = "JetBrainsMono"; size = 11; };
+    font = {
+      name = "JetBrainsMono";
+      size = 11;
+    };
     settings = {
       window_padding_width = 12;
       term = "xterm-256color";
@@ -74,7 +77,7 @@
   programs.git = (pkgs.callPackage ./apps/git.nix { }).programs.git;
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs;[
+  home.packages = with pkgs; [
     jq
     lazygit
     lazydocker
