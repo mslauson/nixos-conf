@@ -3,7 +3,7 @@
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
+  # home-manager.useGlobalPkgs = true;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "mslauson";
@@ -17,7 +17,12 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
-
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      # allowUnfreePredicate = (_: true);
+    };
+  };
   #GTK Config
   gtk = {
     enable = true;
@@ -83,12 +88,15 @@
     lazydocker
     nixfmt
     golines
-    # jetbrains-toolbox
     docker-compose
 
     insomnia
+    jetbrains-toolbox
     bitwarden
     firefox
+    steam
+    discord
+    heroic
 
     #GTK
     catppuccin-gtk
