@@ -20,6 +20,13 @@
       lg = "log --graph --format='%Cred%h%Creset  %<|(15) %C(white)%s %<|(35) %Creset %Cgreen(%cr)%<|(55)  %C(blue)<%an>%Creset%C(yellow)%d%Creset'";
     };
     extraConfig = {
+      init = { defaultBranch = "main"; };
+      pull = {
+        rebase = false;
+      };
+      commit = {
+        gpgSign = true;
+      };
       web = {
         browser = "${firefox}/bin/firefox";
       };
