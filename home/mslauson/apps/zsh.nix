@@ -3,11 +3,10 @@
     enable = true;
     # enableAutosuggestions = true;
     # enableCompletion = true;
-    history =
-      {
-        extended = true;
-        save = 25000;
-      };
+    history = {
+      extended = true;
+      save = 25000;
+    };
     plugins = [
       {
         # will source zsh-autosuggestions.plugin.zsh
