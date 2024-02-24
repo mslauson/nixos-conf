@@ -1,7 +1,7 @@
 {}: {
   programs.zsh = {
     enable = true;
-    enableAutocompletion = true;
+    enableAutoCompletion = true;
     enableCompletion = true;
     history =
       {
