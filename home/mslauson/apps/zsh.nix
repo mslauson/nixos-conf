@@ -6,8 +6,15 @@
     shellAliases = {
       rsrc = "source ~/.zshrc";
 
-      nrs = "nixos-rebuild switch";
+      tma = "tmux attach -t";
+      tmaw = "tmux attach -t work";
+      tmac = "tmux attach -t conf";
+      tman = "tmux attach -t notes";
+      tmar = "tmux attach -t rest";
+
+      nrs = "sudo nixos-rebuild switch";
       hms = "home-manager switch";
+      hmsz = "home-manager switch && source ~/.zshrc";
       hmsb = "home-manager switch -b backup";
 
       pApi = "cd ~/projects/api";
@@ -23,29 +30,31 @@
       yubiNanoC = "gpg-connect-agent 'scd 24009623' 'learn --force' /bye";
       yubiNanoA = "gpg-connect-agent 'scd 22748289' 'learn --force' /bye";
       yubiNfc = "gpg-connect-agent 'scd 24747238' 'learn --force' /bye";
+
+      lolhello = "echo 'Hello Matt!' | lolcat";
     };
     history = {
       extended = true;
       save = 25000;
     };
-    # plugins = [
-    #   {
-    #     name = "zsh-autosuggestions";
-    #     src = pkgs.zsh-autosuggestions;
-    #   }
-    #   {
-    #     name = "zsh-completions";
-    #     src = pkgs.zsh-completions;
-    #   }
-    #   {
-    #     name = "zsh-syntax-highlighting";
-    #     src = pkgs.zsh-syntax-highlighting;
-    #   }
-    #   {
-    #     name = "zsh-fzf-tab";
-    #     src = pkgs.zsh-fzf-tab;
-    #   }
-    # ];
+    plugins = [
+      {
+        name = "zsh-autosuggestions";
+        src = pkgs.zsh-autosuggestions;
+      }
+      {
+        name = "zsh-completions";
+        src = pkgs.zsh-completions;
+      }
+      {
+        name = "zsh-syntax-highlighting";
+        src = pkgs.zsh-syntax-highlighting;
+      }
+      {
+        name = "zsh-fzf-tab";
+        src = pkgs.zsh-fzf-tab;
+      }
+    ];
     # zplug = {
     #   enable = true;
     #   plugins = [
