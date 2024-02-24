@@ -65,6 +65,7 @@
     lazygit
     lazydocker
     nixfmt
+    golines
     # jetbrains-toolbox
     docker-compose
 
