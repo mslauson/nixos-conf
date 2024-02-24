@@ -4,7 +4,7 @@
     newSession = true;
     mouse = true;
     plugins = with pkgs;[
-      { plugin = tmuxPlugins.catppuccin; extraConfig = "set -g @catppuccin_window_tabs_enabled 'on' @catppuccin_date_time '%Y-%m-%d %H:%M'"; }
+      { plugin = tmuxPlugins.catppuccin; extraConfig = "set -g @catppuccin_window_tabs_enabled 'on' set -g @catppuccin_date_time '%Y-%m-%d %H:%M'"; }
       tmuxPlugins.tmux-fzf
       { plugin = tmuxPlugins.resurrect; extraConfig = "set -g @resurrect-strategy-nvim 'session'"; }
       { plugin = tmuxPlugins.continuum; extraConfig = ''      set -g @continuum-restore 'on'      set -g @continuum-save-interval '60' # minutes    ''; }
