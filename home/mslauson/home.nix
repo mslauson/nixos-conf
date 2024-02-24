@@ -77,9 +77,8 @@
   # environment.
   home.packages = with pkgs;
     let
-      devPackages = import ./home-packages/development.nix;
-      toolPackages = import ./home-packages/tools.nix;
-      appPackages = import ./home-packages/apps.nix;
+      devPackages = import ./packages/development.nix;
+      applicationPackages = import ./packages/applications.nix;
     in
     devPackages ++ toolPackages ++ appPackages ++ [
       # GTK Theme
@@ -95,7 +94,7 @@
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;    # ".screenrc".source = dotfiles/screenrc;    # ".screenrc".source = dotfiles/screenrc;    # ".screenrc".source = dotfiles/screenrc;
+    # ".screenrc".source = dotfiles/screenrc;    # ".screenrc".source = dotfiles/screenrc;    # ".screenrc".source = dotfiles/screenrc;    # ".screenrc".source = dotfiles/screenrc;    # ".screenrc".source = dotfiles/screenrc;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
