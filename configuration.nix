@@ -79,10 +79,12 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  programs.zsh.enable = true;
   users.users.mslauson = {
     isNormalUser = true;
     description = "Matthew Slauson";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs;
       [
         # firefox
@@ -93,6 +95,7 @@
     isNormalUser = true;
     description = "Nicholas Kuehne";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs;
       [
         # firefox
