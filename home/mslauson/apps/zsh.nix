@@ -3,6 +3,22 @@
     enable = true;
     # enableAutosuggestions = true;
     # enableCompletion = true;
+    shellAliases = {
+
+      pApi = "cd ~/projects/api";
+      pApiN = "cd ~/projects/api/ndt";
+      pApiBl = "cd ~/projects/api/blog";
+      pApiBu = "cd ~/projects/api/budget";
+      pConf = "cd ~/projects/config";
+      pLibs = "cd ~/projects/libs";
+      pRest = "cd ~/projects/libs/rest";
+      pUi = "cd ~/projects/ui";
+      pBlog = "cd ~/projects/ui/blog";
+
+      yubiNanoC = "gpg-connect-agent 'scd 24009623' 'learn --force' /bye";
+      yubiNanoA = "gpg-connect-agent 'scd 22748289' 'learn --force' /bye";
+      yubiNfc = "gpg-connect-agent 'scd 24747238' 'learn --force' /bye";
+    };
     history = {
       extended = true;
       save = 25000;
