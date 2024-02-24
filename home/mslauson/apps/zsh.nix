@@ -20,6 +20,10 @@
         name = "zsh-syntax-highlighting";
         src = pkgs.zsh-syntax-highlighting;
       }
+      {
+        name = "zsh-fzf-tab";
+        src = pkgs.zsh-fzf-tab;
+      }
     ];
     # zplug = {
     #   enable = true;
