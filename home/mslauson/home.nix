@@ -80,6 +80,7 @@
   programs.ripgrep.enable = true;
   programs.rofi = { enable = true; };
   programs.git = (pkgs.callPackage ./apps/git.nix { }).programs.git;
+  programs.zsh = (pkgs.callPackage ./apps/zsh.nix { }).programs.zsh;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
