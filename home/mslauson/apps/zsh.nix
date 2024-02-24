@@ -4,6 +4,11 @@
     # enableAutosuggestions = true;
     # enableCompletion = true;
     shellAliases = {
+      rsrc = "source ~/.zshrc";
+
+      nrs = "nixos-rebuild switch";
+      hms = "home-manager switch";
+      hmsb = "home-manager switch -b backup";
 
       pApi = "cd ~/projects/api";
       pApiN = "cd ~/projects/api/ndt";
