@@ -113,7 +113,6 @@
     wget
     btop
     neovim
-    tmux
     gnupg
     gum
     lolcat
