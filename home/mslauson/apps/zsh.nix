@@ -8,6 +8,18 @@
         extended = true;
         save = 25000;
       };
+    plugins = [
+      {
+        # will source zsh-autosuggestions.plugin.zsh
+        name = "zsh-autosuggestions";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-autosuggestions";
+          # rev = "v0.4.0";
+          # sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
+        };
+      }
+    ];
     # zplug = {
     #   enable = true;
     #   plugins = [
@@ -26,22 +38,5 @@
     #
     # };
 
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "zsh-users/zsh-autosuggestions"
-        "zsh-users/zsh-completions"
-        "zsh-users/zsh-syntax-highlighting"
-        "Aloxaf/fzf-tab"
-        "akash329d/zsh-alias-finder"
-        "KulkarniKaustubh/fzf-dir-navigator"
-        "joshskidmore/zsh-fzf-history-search"
-        "reegnz/jq-zsh-plugin"
-
-        "ChrisPenner/session-sauce"
-        "nix-community/nix-zsh-completions"
-      ];
-
-    };
   };
 }
