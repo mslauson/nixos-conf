@@ -132,7 +132,9 @@
     jdk21
     cargo
     rustup
-    libclang
+    # libclang
+    # libgcc
+    gcc
 
     #gnome software
     gnomecast
