@@ -5,11 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -84,21 +83,22 @@
     isNormalUser = true;
     description = "Matthew Slauson";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      # firefox
-      #  thunderbird
-    ];
+    packages = with pkgs;
+      [
+        # firefox
+        #  thunderbird
+      ];
   };
   users.users.nkuehne = {
     isNormalUser = true;
     description = "Nicholas Kuehne";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      # firefox
-      #  thunderbird
-    ];
+    packages = with pkgs;
+      [
+        # firefox
+        #  thunderbird
+      ];
   };
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -132,6 +132,7 @@
     jdk21
     cargo
     rustup
+    libclang
 
     #gnome software
     gnomecast

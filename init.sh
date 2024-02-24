@@ -1,9 +1,9 @@
 #!/bin/sh
 currentPath="$(pwd)"
 
-nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
-sudo nix-channel --update
-nix-shell '<home-manager>' -A install
+# nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
+# sudo nix-channel --update
+# nix-shell '<home-manager>' -A install
 
 for file in configuration.nix; do
 	sudo rm -rf /etc/nixos/$file
