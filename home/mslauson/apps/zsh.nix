@@ -9,9 +9,12 @@
     };
     plugins = [
       {
-        # will source zsh-autosuggestions.plugin.zsh
         name = "zsh-autosuggestions";
         src = pkgs.zsh-autosuggestions;
+      }
+      {
+        name = "zsh-completions";
+        src = pkgs.zsh-completions;
       }
       {
         name = "zsh-syntax-highlighting";
