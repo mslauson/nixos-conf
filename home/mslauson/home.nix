@@ -79,7 +79,7 @@
     nodejs_21
     go
     jdk21
-    cargo
+    # cargo
     rustup
     gcc
 
