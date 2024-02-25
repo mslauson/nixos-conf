@@ -22,10 +22,10 @@ select computnerName in $desktopChoices; do
   chosenDesktopPath="$currentPath"/desktop/"$computnerName"
   echo $chosenDesktopPath
 
-  for file in configuration.nix; do
-    sudo rm -rf /etc/nixos/$file
-    sudo ln -s "$chosenDesktopPath"/"$file" /etc/nixos/"$file"
-  done
+  # for file in configuration.nix; do
+    sudo rm -rf /etc/nixos/*
+    sudo ln -s "$chosenDesktopPath"/* /etc/nixos/
+  # done
 done
 
 # Home manager
