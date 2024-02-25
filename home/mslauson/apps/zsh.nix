@@ -59,15 +59,15 @@
         name = "zsh-fzf-tab";
         src = pkgs.zsh-fzf-tab;
       }
-      {
-        name = "zsh-alias-finder";
-        src = pkgs.fetchFromGitHub
-          {
-            owner = "akash329d";
-            repo = "zsh-alias-finder";
-            sha256 = "ef6451c5b08f833f5c74303928f7b5c7f858ae84";
-          };
-      }
+      # {
+      #   name = "zsh-alias-finder";
+      #   src = pkgs.fetchFromGitHub
+      #     {
+      #       owner = "akash329d";
+      #       repo = "zsh-alias-finder";
+      #       sha256 = "ef6451c5b08f833f5c74303928f7b5c7f858ae84";
+      #     };
+      # }
     ];
     antidote = {
       enable = true;
@@ -76,6 +76,7 @@
         "KulkarniKaustubh/fzf-dir-navigator"
         "joshskidmore/zsh-fzf-history-search"
         "reegnz/jq-zsh-plugin"
+        "akash329d/zsh-alias-finder"
       ];
 
     };
