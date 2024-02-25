@@ -1,9 +1,9 @@
 {
   programs.starship = {
     enable = true;
-    palette = "catppuccin_mocha";
 
     settings = {
+      palette = "catppuccin_mocha";
       character = {
         success_symbol = "[[](green) ❯](lavender)";
         error_symbol = "[❯](red)";
