@@ -3,28 +3,13 @@
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  # home-manager.useGlobalPkgs = true;
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "mslauson";
   home.homeDirectory = "/home/mslauson";
 
-  home.stateVersion = "23.11"; # Please read the comment before changing.
+  home.stateVersion = "23.11"; 
   nixpkgs = { config = { allowUnfree = true; }; };
   #GTK Config
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Catppuccin-Mocha-Compact-Peach-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "peach" ];
-        size = "compact";
-        tweaks = [ "rimless" "black" ];
-        variant = "mocha";
-      };
-    };
-  };
-  imports = [ ./apps/kitty.nix ];
+  imports = [ ./apps/kitty.nix ./apps/fzf.nix ./apps/starship.nix ./ui/gtk.nix];
   programs.lazygit = {
     enable = true;
     settings = {
@@ -43,7 +28,6 @@
   };
 
   programs.zoxide.enable = true;
-  programs.fzf.enable = true;
   programs.ripgrep.enable = true;
   programs.rofi = { enable = true; };
   programs.git = (pkgs.callPackage ./apps/git.nix { }).programs.git;
