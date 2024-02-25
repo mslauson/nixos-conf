@@ -54,24 +54,54 @@
         name = "zsh-fzf-tab";
         src = pkgs.zsh-fzf-tab;
       }
+      {
+        name = "zsh-alias-finder";
+        src = pkgs.fetchFromGitHub
+          {
+            owner = "akash329d";
+            repo = "zsh-alias-finder";
+            sha256 = "ef6451c5b08f833f5c74303928f7b5c7f858ae84";
+          };
+      }
+      {
+        name = " zsh-fzf-history-search ";
+        src = pkgs.github;
+      }
+      {
+        name = "
+            nix-zsh-completions ";
+        src = pkgs.niz-zsh-completions;
+      }
     ];
+    antidote = {
+      enable = true;
+      plugins = [
+
+        "KulkarniKaustubh/fzf-dir-navigator"
+        "joshskidmore/zsh-fzf-history-search"
+        "reegnz/jq-zsh-plugin"
+      ];
+
+    };
     # zplug = {
     #   enable = true;
     #   plugins = [
-    #     { name="zsh-users/zsh-autosuggestions"; }
-    #     { name="zsh-users/zsh-completions"; }
-    #     { name="zsh-users/zsh-syntax-highlighting"; }
-    #     { name="Aloxaf/fzf-tab"; }
-    #     { name="akash329d/zsh-alias-finder"; }
-    #     { name="KulkarniKaustubh/fzf-dir-navigator"; }
-    #     { name="joshskidmore/zsh-fzf-history-search"; }
-    #     { name="reegnz/jq-zsh-plugin"; }
+    #     { name=" zsh-users/zsh-autosuggestions "; }
+    #     { name=" zsh-users/zsh-completions "; }
+    #     { name=" zsh-users/zsh-syntax-highlighting "; }
+    #     { name=" Aloxaf/fzf-tab "; }
+    #     { name=" akash329d/zsh-alias-finder "; }
+    #     { name=" KulkarniKaustubh/fzf-dir-navigator "; }
+    #     { name=" joshskidmore/zsh-fzf-history-search "; }
+    #     { name=" reegnz/jq-zsh-plugin "; }
     #
-    #     { name="ChrisPenner/session-sauce"; }
-    #     { name="nix-community/nix-zsh-completions"; }
+    #     { name=" ChrisPenner/session-sauce "; }
+    #     { name=" nix-community/nix-zsh-completions "; }
     #   ];
     #
     # };
 
   };
 }
+
+
