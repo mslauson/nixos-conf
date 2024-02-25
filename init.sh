@@ -2,18 +2,27 @@
 currentPath="$(pwd)"
 
 get_available_desktops() {
-	for dir in desktop/*/; do echo "$dir"; done
+	for dir_path in desktop/*/; do 
+    trimmed_dir_path="${dir_path%/}"
+    desktop_name="${trimmed_dir_path##*/}"
+    echo "$desktop_name"; 
+  done
+  echo "exit"
 }
+get_available_desktops
 
 desktopChoices=$(get_available_desktops)
 # nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
 # sudo nix-channel --update
 # nix-shell '<home-manager>' -A install
-select desktop in $desktopChoices; do
+select computnerName in $desktopChoices; do
 
-  chosenDesktopPath ="$currentPath"/"$desktop"
+  echo $computnerName
 
-  for file in chosenDesktopPath; do
+  chosenDesktopPath="$currentPath"/desktop/"$computnerName"
+  echo $chosenDesktopPath
+
+  for file in configuration.nix; do
     sudo rm -rf /etc/nixos/$file
     sudo ln -s "$chosenDesktopPath"/"$file" /etc/nixos/"$file"
   done
