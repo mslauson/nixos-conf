@@ -42,37 +42,14 @@
       extended = true;
       save = 25000;
     };
-    plugins = [
-      {
-        name = "zsh-autosuggestions";
-        src = pkgs.zsh-autosuggestions;
-      }
-      {
-        name = "zsh-completions";
-        src = pkgs.zsh-completions;
-      }
-      {
-        name = "zsh-syntax-highlighting";
-        src = pkgs.zsh-syntax-highlighting;
-      }
-      {
-        name = "zsh-fzf-tab";
-        src = pkgs.zsh-fzf-tab;
-      }
-      # {
-      #   name = "zsh-alias-finder";
-      #   src = pkgs.fetchFromGitHub
-      #     {
-      #       owner = "akash329d";
-      #       repo = "zsh-alias-finder";
-      #       sha256 = "ef6451c5b08f833f5c74303928f7b5c7f858ae84";
-      #     };
-      # }
-    ];
     antidote = {
       enable = true;
       plugins = [
 
+        "zsh-users/zsh-autosuggestions"
+        "zsh-users/zsh-completions"
+        "zsh-users/zsh-syntax-highlighting"
+        "Aloxaf/fzf-tab"
         "KulkarniKaustubh/fzf-dir-navigator"
         "joshskidmore/zsh-fzf-history-search"
         "reegnz/jq-zsh-plugin"
@@ -80,25 +57,6 @@
       ];
 
     };
-    # zplug = {
-    #   enable = true;
-    #   plugins = [
-    #     { name=" zsh-users/zsh-autosuggestions "; }
-    #     { name=" zsh-users/zsh-completions "; }
-    #     { name=" zsh-users/zsh-syntax-highlighting "; }
-    #     { name=" Aloxaf/fzf-tab "; }
-    #     { name=" akash329d/zsh-alias-finder "; }
-    #     { name=" KulkarniKaustubh/fzf-dir-navigator "; }
-    #     { name=" joshskidmore/zsh-fzf-history-search "; }
-    #     { name=" reegnz/jq-zsh-plugin "; }
-    #
-    #     { name=" ChrisPenner/session-sauce "; }
-    #     { name=" nix-community/nix-zsh-completions "; }
-    #   ];
-    #
-    # };
-
   };
 }
-
 
