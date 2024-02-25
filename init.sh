@@ -1,13 +1,22 @@
 #!/bin/sh
 currentPath="$(pwd)"
 
+get_available_desktops() {
+	for dir in desktop/*/; do echo "$dir"; done
+}
+
+desktopChoices=$(get_available_desktops)
 # nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz home-manager
 # sudo nix-channel --update
 # nix-shell '<home-manager>' -A install
+select desktop in $desktopChoices; do
 
-for file in configuration.nix; do
-	sudo rm -rf /etc/nixos/$file
-	sudo ln -s "$currentPath"/"$file" /etc/nixos/"$file"
+  chosenDesktopPath ="$currentPath"/"$desktop"
+
+  for file in chosenDesktopPath; do
+    sudo rm -rf /etc/nixos/$file
+    sudo ln -s "$chosenDesktopPath"/"$file" /etc/nixos/"$file"
+  done
 done
 
 # Home manager
