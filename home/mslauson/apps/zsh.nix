@@ -22,10 +22,15 @@
       pApiBl = "cd ~/projects/api/blog";
       pApiBu = "cd ~/projects/api/budget";
       pConf = "cd ~/projects/config";
+      pniConf = "cd ~/projects/config/nixos-conf";
+      pneConf = "cd ~/projects/config/neovim-conf";
       pLibs = "cd ~/projects/libs";
       pRest = "cd ~/projects/libs/rest";
       pUi = "cd ~/projects/ui";
       pBlog = "cd ~/projects/ui/blog";
+
+      nvNix = "pniConf && nvim .";
+      nvNvim = "pneConf && nvim .";
 
       yubiNanoC = "gpg-connect-agent 'scd 24009623' 'learn --force' /bye";
       yubiNanoA = "gpg-connect-agent 'scd 22748289' 'learn --force' /bye";
@@ -62,15 +67,6 @@
             repo = "zsh-alias-finder";
             sha256 = "ef6451c5b08f833f5c74303928f7b5c7f858ae84";
           };
-      }
-      {
-        name = " zsh-fzf-history-search ";
-        src = pkgs.github;
-      }
-      {
-        name = "
-            nix-zsh-completions ";
-        src = pkgs.niz-zsh-completions;
       }
     ];
     antidote = {
