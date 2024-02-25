@@ -41,7 +41,6 @@
 
       git_branch = {
         symbol = "";
-        format = "[ $symbol$branch (:$remote_branch) ] ($style) ";
       };
 
       golang = {
