@@ -116,6 +116,10 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.udev.packages = [ pkgs.yubikey-personalization ];
+  security.pam.services = {
+  login.u2fAuth = true;
+  sudo.u2fAuth = true;
+  };
 
   # Open ports in the firewall.
     # networking.firewall.allowedTCPPorts = [ ... ];
