@@ -81,10 +81,10 @@
   users.users.mslauson = {
     isNormalUser = true;
     description = "Matthew Slauson";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "nix-users" ];
     packages = with pkgs;
       [
-        firefox
+        # firefox
         #  thunderbird
       ];
   };
@@ -113,7 +113,7 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    jellyfink
+    jellyfin
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
