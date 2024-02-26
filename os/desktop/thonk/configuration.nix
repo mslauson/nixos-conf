@@ -9,6 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./nvidia.nix
+    /home/mslauson/projects/config/nixos-conf/os/desktop/users.nix
   ];
 
   # Bootloader.
@@ -24,6 +25,13 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.hosts = { "10.7.5.60" = [ "gertrude" ]; };
+
+  fileSystems."/mnt/media" = {
+    fsType = "nfs";
+    device = "getrude:/mnt/liddy-tiddy/media";
+    options = [ "_netdev" "noautox-systemd" "x-systemd.automount" "x-systemd.mount-timeout=10" "timeo=14" "x-systemd.idle-timeout=1min" "0" "0" ];
+  };
 
   # Set your time zone.
   time.timeZone = "America/Chicago";
@@ -81,44 +89,6 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.zsh.enable = true;
-  users.users.mslauson = {
-    isNormalUser = true;
-    description = "Matthew Slauson";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
-    packages = with pkgs;
-      [
-        # firefox
-        #  thunderbird
-      ];
-  };
-  users.users.nkuehne = {
-    isNormalUser = true;
-    description = "Nicholas Kuehne";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
-    packages = with pkgs;
-      [
-        # firefox
-        #  thunderbird
-      ];
-  };
-
-  users.groups.nas-user = {
-    members = [ "mslauson" ];
-    gid = 1069;
-
-  };
-  users.groups.nas-admin = {
-    members = [ "mslauson" ];
-    gid = 3001;
-
-  };
-  users.groups.nas-media = {
-    members = [ "mslauson" ];
-    gid = 3002;
-
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -145,19 +115,25 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+  services.udev.packages = [ pkgs.yubikey-personalization ];
+  security.pam.services = {
+  login.u2fAuth = true;
+  sudo.u2fAuth = true;
+  };
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+    # networking.firewall.allowedTCPPorts = [ ... ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
+    # Or disable the firewall altogether.
+    # networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+    # This value determines the NixOS release from which the default
+    # settings for stateful data, like file locations and database versions
+    # on your system were taken. It‘s perfectly fine and recommended to leave
+    # this value at the release version of the first install of this system.
+    # Before changing this value read the documentation for this option
+    # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+    system.stateVersion = "23.11"; # Did you read the comment?
+
 
 }

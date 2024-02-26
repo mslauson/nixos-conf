@@ -5,11 +5,19 @@
   programs.home-manager.enable = true;
   home.username = "mslauson";
   home.homeDirectory = "/home/mslauson";
+  manual.html.enable = true;
 
-  home.stateVersion = "23.11"; 
+  home.stateVersion = "23.11";
   nixpkgs = { config = { allowUnfree = true; }; };
   #GTK Config
-  imports = [ ./apps/kitty.nix ./apps/fzf.nix ./apps/starship.nix ./ui/gtk.nix];
+  imports = [
+    ./programs/kitty.nix
+    ./programs/fzf.nix
+    ./programs/rofi.nix
+    ./programs/starship.nix
+    ./ui/gtk.nix
+  ];
+
   programs.lazygit = {
     enable = true;
     settings = {
@@ -30,20 +38,23 @@
   programs.zoxide.enable = true;
   programs.ripgrep.enable = true;
   programs.rofi = { enable = true; };
-  programs.git = (pkgs.callPackage ./apps/git.nix { }).programs.git;
-  programs.zsh = (pkgs.callPackage ./apps/zsh.nix { }).programs.zsh;
-  programs.tmux = (pkgs.callPackage ./apps/tmux.nix { }).programs.tmux;
+
+  programs.git = (pkgs.callPackage ./programs/git.nix { }).programs.git;
+  programs.zsh = (pkgs.callPackage ./programs/zsh.nix { }).programs.zsh;
+  programs.tmux = (pkgs.callPackage ./programs/tmux.nix { }).programs.tmux;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     curl
     lshw
     gum
+    xclip
     lolcat
     jq
     lazygit
     lazydocker
     docker-compose
+    yubikey-manager
 
     #Wayland
     # wlogout
@@ -54,6 +65,7 @@
     hyprland
     hyprpaper
     hyprdim
+    waybar
 
     neovim
     jetbrains-toolbox
