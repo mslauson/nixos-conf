@@ -115,7 +115,7 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-  services.udev.packages = [ pkgs.yubikey-personalization ]
+  services.udev.packages = [ pkgs.yubikey-personalization ];
 
   # Open ports in the firewall.
     # networking.firewall.allowedTCPPorts = [ ... ];
