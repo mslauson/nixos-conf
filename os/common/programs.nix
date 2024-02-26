@@ -1,8 +1,8 @@
-{
+{ config, pkgs, ... }: {
   programs = {
     hyprland = {
       enable = true;
-      extraNvidiaPatches = true;
+      nvidiaPatches = true;
       xwayland = {
         hidpi = true;
         enable = true;

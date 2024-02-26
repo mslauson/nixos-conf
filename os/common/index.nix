@@ -6,6 +6,6 @@
     ./security.nix
     ./services.nix
     ./users.nix
-    ./zdg.nix
+    ./xdg.nix
   ];
 }
