@@ -9,6 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./nvidia.nix
+    ~/projects/config/nixos-conf/os/desktop/users.nix
   ];
 
   # Bootloader.
@@ -81,44 +82,6 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.zsh.enable = true;
-  users.users.mslauson = {
-    isNormalUser = true;
-    description = "Matthew Slauson";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
-    packages = with pkgs;
-      [
-        # firefox
-        #  thunderbird
-      ];
-  };
-  users.users.nkuehne = {
-    isNormalUser = true;
-    description = "Nicholas Kuehne";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
-    packages = with pkgs;
-      [
-        # firefox
-        #  thunderbird
-      ];
-  };
-
-  users.groups.nas-user = {
-    members = [ "mslauson" ];
-    gid = 1069;
-
-  };
-  users.groups.nas-admin = {
-    members = [ "mslauson" ];
-    gid = 3001;
-
-  };
-  users.groups.nas-media = {
-    members = [ "mslauson" ];
-    gid = 3002;
-
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
