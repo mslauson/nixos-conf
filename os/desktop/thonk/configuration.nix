@@ -25,6 +25,12 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.hosts = { "10.7.5.60" = [ "gertrude" ]; };
+
+  fileSystems."/mnt/media" = {
+    fsType = "nfs";
+    options = [ "_netdev" "noautox-systemd" "x-systemd.automount" "x-systemd.mount-timeout=10" "timeo=14" "x-systemd.idle-timeout=1min" "0" "0" ];
+  };
 
   # Set your time zone.
   time.timeZone = "America/Chicago";
