@@ -15,6 +15,8 @@
     ./programs/fzf.nix
     ./programs/rofi.nix
     ./programs/lazygit.nix
+    ./programs/thefuck.nix
+    ./services/gpg-agent.nix
     ./programs/starship.nix
     ./ui/gtk.nix
   ];
