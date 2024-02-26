@@ -49,9 +49,6 @@
     sway-audio-idle-inhibit
 
     ##Hyprland
-    hyprpaper
-    hyprdim
-    waybar
 
     neovim
     jetbrains-toolbox

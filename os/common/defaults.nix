@@ -21,7 +21,7 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
   programs.hyprland = {
     enable = true;
@@ -68,6 +68,13 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    rofi
+    hyprpaper
+    hyprdim
+    waybar
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
