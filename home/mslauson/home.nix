@@ -48,6 +48,7 @@
   # environment.
   home.packages = with pkgs; [
     curl
+    killall
     lshw
     gum
     xclip
