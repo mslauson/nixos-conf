@@ -54,6 +54,7 @@
     lazygit
     lazydocker
     docker-compose
+    yubikey-manager
 
     #Wayland
     # wlogout
@@ -64,6 +65,7 @@
     hyprland
     hyprpaper
     hyprdim
+    waybar
 
     neovim
     jetbrains-toolbox
