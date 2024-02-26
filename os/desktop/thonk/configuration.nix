@@ -30,7 +30,16 @@
   fileSystems."/mnt/media" = {
     fsType = "nfs";
     device = "getrude:/mnt/liddy-tiddy/media";
-    options = [ "_netdev" "noautox-systemd" "x-systemd.automount" "x-systemd.mount-timeout=10" "timeo=14" "x-systemd.idle-timeout=1min" "0" "0" ];
+    options = [
+      "_netdev"
+      "noautox-systemd"
+      "x-systemd.automount"
+      "x-systemd.mount-timeout=10"
+      "timeo=14"
+      "x-systemd.idle-timeout=1min"
+      "0"
+      "0"
+    ];
   };
 
   # Set your time zone.
@@ -85,14 +94,14 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.zsh.enable = true;
+  environment.pathsToLink = [ "/share/zsh" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  environment.pathsToLink = [ "/share/zsh" ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -117,23 +126,22 @@
   services.openssh.enable = true;
   services.udev.packages = [ pkgs.yubikey-personalization ];
   security.pam.services = {
-  login.u2fAuth = true;
-  sudo.u2fAuth = true;
+    login.u2fAuth = true;
+    sudo.u2fAuth = true;
   };
 
   # Open ports in the firewall.
-    # networking.firewall.allowedTCPPorts = [ ... ];
-    # networking.firewall.allowedUDPPorts = [ ... ];
-    # Or disable the firewall altogether.
-    # networking.firewall.enable = false;
+  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Or disable the firewall altogether.
+  # networking.firewall.enable = false;
 
-    # This value determines the NixOS release from which the default
-    # settings for stateful data, like file locations and database versions
-    # on your system were taken. It‘s perfectly fine and recommended to leave
-    # this value at the release version of the first install of this system.
-    # Before changing this value read the documentation for this option
-    # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-    system.stateVersion = "23.11"; # Did you read the comment?
-
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "23.11"; # Did you read the comment?
 
 }

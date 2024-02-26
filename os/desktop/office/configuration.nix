@@ -13,17 +13,25 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "office";
+  networking.hosts = { "10.7.5.60" = [ "gertrude" ]; };
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
+  fileSystems."/mnt/media" = {
+    fsType = "nfs";
+    device = "getrude:/mnt/liddy-tiddy/media";
+    options = [
+      "_netdev"
+      "noautox-systemd"
+      "x-systemd.automount"
+      "x-systemd.mount-timeout=10"
+      "timeo=14"
+      "x-systemd.idle-timeout=1min"
+      "0"
+      "0"
+      "uid=0"
+      "gid=3002"
+    ];
+  };
   time.timeZone = "America/Chicago";
 
   # Select internationalisation properties.
@@ -132,7 +140,7 @@
     group = "nas-media";
   };
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
