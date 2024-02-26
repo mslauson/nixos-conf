@@ -2,9 +2,9 @@
   programs = {
     hyprland = {
       enable = true;
-      nvidiaPatches = true;
+      enableNvidiaPatches = true;
       xwayland = {
-        hidpi = true;
+        # hidpi = true;
         enable = true;
       };
     };
