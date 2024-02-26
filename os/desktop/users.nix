@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   users.users.mslauson = {
     isNormalUser = true;
     description = "Matthew Slauson";

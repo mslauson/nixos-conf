@@ -9,7 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./nvidia.nix
-    ~/projects/config/nixos-conf/os/desktop/users.nix
+    /home/mslauson/projects/config/nixos-conf/os/desktop/users.nix
   ];
 
   # Bootloader.
