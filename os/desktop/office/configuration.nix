@@ -7,8 +7,7 @@
 {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../../common/defaults.nix
-    ../../common/fs.nix
+    ../../common/index.nix
     ../../services/jellyfin.nix
     ../../common/users.nix
     # ../../services/yubikey.nix
