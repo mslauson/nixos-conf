@@ -19,18 +19,12 @@
     };
     extraConfig = {
       init = { defaultBranch = "main"; };
-      pull = {
-        rebase = false;
-      };
+      pull = { rebase = false; };
       commit = {
-        gpgSign = true;
+        # gpgSign = true;
       };
-      web = {
-        browser = "${firefox}/bin/firefox";
-      };
-      core = {
-        editor = "nvim";
-      };
+      web = { browser = "${firefox}/bin/firefox"; };
+      core = { editor = "nvim"; };
     };
     diff-so-fancy = {
       enable = true;
