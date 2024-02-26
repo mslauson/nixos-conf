@@ -13,6 +13,7 @@
   imports = [
     ./programs/kitty.nix
     ./programs/fzf.nix
+    ./programs/rofi.nix
     ./programs/starship.nix
     ./ui/gtk.nix
   ];
