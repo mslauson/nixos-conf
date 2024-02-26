@@ -19,16 +19,19 @@ select computnerName in $desktopChoices; do
 
   echo $computnerName
 
+  osDirPath="$currentPath"/os
   chosenDesktopPath="$currentPath"/os/desktop/"$computnerName"
   echo $chosenDesktopPath
 
   # for file in configuration.nix; do
     sudo rm -rf /etc/nixos/*
+
+    sudo ln -s "$osDirPath"/* /etc/nixos/
     sudo ln -s "$chosenDesktopPath"/* /etc/nixos/
   # done
-done
 
 # Home manager
 
 rm -rf /home/mslauson/.config/home-manager
 ln -s "$currentPath"/home/mslauson /home/mslauson/.config/home-manager
+done
