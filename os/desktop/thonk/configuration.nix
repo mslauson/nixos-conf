@@ -29,6 +29,7 @@
 
   fileSystems."/mnt/media" = {
     fsType = "nfs";
+    device = "getrude:/mnt/liddy-tiddy/media";
     options = [ "_netdev" "noautox-systemd" "x-systemd.automount" "x-systemd.mount-timeout=10" "timeo=14" "x-systemd.idle-timeout=1min" "0" "0" ];
   };
 
