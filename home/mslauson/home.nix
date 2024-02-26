@@ -38,6 +38,7 @@
   programs.zoxide.enable = true;
   programs.ripgrep.enable = true;
   programs.rofi = { enable = true; };
+
   programs.git = (pkgs.callPackage ./programs/git.nix { }).programs.git;
   programs.zsh = (pkgs.callPackage ./programs/zsh.nix { }).programs.zsh;
   programs.tmux = (pkgs.callPackage ./programs/tmux.nix { }).programs.tmux;
@@ -47,6 +48,7 @@
     curl
     lshw
     gum
+    xclip
     lolcat
     jq
     lazygit

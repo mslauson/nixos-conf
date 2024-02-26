@@ -2,7 +2,7 @@
 currentPath="$(pwd)"
 
 get_available_desktops() {
-	for dir_path in desktop/*/; do 
+	for dir_path in os/desktop/*/; do 
     trimmed_dir_path="${dir_path%/}"
     desktop_name="${trimmed_dir_path##*/}"
     echo "$desktop_name"; 
@@ -19,7 +19,7 @@ select computnerName in $desktopChoices; do
 
   echo $computnerName
 
-  chosenDesktopPath="$currentPath"/desktop/"$computnerName"
+  chosenDesktopPath="$currentPath"/os/desktop/"$computnerName"
   echo $chosenDesktopPath
 
   # for file in configuration.nix; do
