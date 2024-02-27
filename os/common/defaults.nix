@@ -32,7 +32,14 @@
 
   # Enable sound with pipewire.
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = { General = { Experimental = true; }; };
+    };
+    pulseaudio.enable = false;
+  };
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
