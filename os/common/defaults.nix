@@ -47,8 +47,6 @@
     #media-session.enable = true;
   };
 
-  # services.xserver.libinput.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
