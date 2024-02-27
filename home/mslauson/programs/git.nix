@@ -20,7 +20,7 @@
     extraConfig = {
       init = { defaultBranch = "main"; };
       pull = { rebase = false; };
-      # commit = { gpgSign = true; };
+      commit = { gpgSign = true; };
       web = { browser = "${firefox}/bin/firefox"; };
       core = { editor = "nvim"; };
     };
