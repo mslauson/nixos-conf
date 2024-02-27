@@ -54,6 +54,8 @@
     jetbrains-toolbox
     insomnia
     popsicle
+    xfce.thunar
+    gparted
 
     # Langs
     nodejs_21
