@@ -2,7 +2,7 @@
 
   environment.systemPackages = with pkgs; [ jellyseer ];
 
-  services.jellyfin = {
+  services.jellyseer = {
     enable = true;
     openFirewall = true;
   };
