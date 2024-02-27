@@ -18,6 +18,7 @@
     ./programs/thefuck.nix
     ./services/gpg-agent.nix
     ./programs/starship.nix
+    ./programs/ssh.nix
     # ./programs/hyprland.nix
     ./ui/gtk.nix
   ];
