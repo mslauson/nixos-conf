@@ -25,7 +25,7 @@
 
   };
   users.groups.nas-media = {
-    members = [ "mslauson" ];
+    members = [ "mslauson" "jellyfin" ];
     gid = 3002;
 
   };

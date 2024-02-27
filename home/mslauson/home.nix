@@ -13,31 +13,17 @@
   imports = [
     ./programs/kitty.nix
     ./programs/fzf.nix
-    ./programs/rofi.nix
+    # ./programs/rofi.nix
+    ./programs/lazygit.nix
+    ./programs/thefuck.nix
+    ./services/gpg-agent.nix
     ./programs/starship.nix
+    # ./programs/hyprland.nix
     ./ui/gtk.nix
   ];
 
-  programs.lazygit = {
-    enable = true;
-    settings = {
-      gui.theme = {
-        lightTheme = false;
-        activeBorderColor = [ "#a6e3a1" "bold" ];
-        inactiveBorderColor = [ "#cdd6f4" ];
-        optionsTextColor = [ "#89b4fa" ];
-        selectedLineBgColor = [ "#313244" ];
-        selectedRangeBgColor = [ "#313244" ];
-        cherryPickedCommitBgColor = [ "#94e2d5" ];
-        cherryPickedCommitFgColor = [ "#89b4fa" ];
-        unstagedChangesColor = [ "red" ];
-      };
-    };
-  };
-
   programs.zoxide.enable = true;
   programs.ripgrep.enable = true;
-  programs.rofi = { enable = true; };
 
   programs.git = (pkgs.callPackage ./programs/git.nix { }).programs.git;
   programs.zsh = (pkgs.callPackage ./programs/zsh.nix { }).programs.zsh;
@@ -46,6 +32,7 @@
   # environment.
   home.packages = with pkgs; [
     curl
+    killall
     lshw
     gum
     xclip
@@ -62,10 +49,6 @@
     sway-audio-idle-inhibit
 
     ##Hyprland
-    hyprland
-    hyprpaper
-    hyprdim
-    waybar
 
     neovim
     jetbrains-toolbox

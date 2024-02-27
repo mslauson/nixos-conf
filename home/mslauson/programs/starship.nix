@@ -2,6 +2,7 @@
   programs.starship = {
     enable = true;
 
+    enableZshIntegration = true;
     settings = {
       palette = "catppuccin_mocha";
       character = {
@@ -20,9 +21,7 @@
         format = "[ $symbol ($version) ] ($style)";
       };
 
-      dart = {
-        format = "[ $symbol ($version) ] ($style)";
-      };
+      dart = { format = "[ $symbol ($version) ] ($style)"; };
 
       docker_context = {
         symbol = " ";
@@ -39,9 +38,7 @@
         format = "[ $symbol ($version) ] ($style)";
       };
 
-      git_branch = {
-        symbol = "";
-      };
+      git_branch = { symbol = ""; };
 
       golang = {
         symbol = " ";
@@ -69,13 +66,9 @@
         format = "[ $symbol ($version) ] ($style)";
       };
 
-      package = {
-        format = "[ $symbol ($version) ] ($style)";
-      };
+      package = { format = "[ $symbol ($version) ] ($style)"; };
 
-      nim = {
-        format = "[ $symbol ($version) ] ($style)";
-      };
+      nim = { format = "[ $symbol ($version) ] ($style)"; };
 
       rust = {
         symbol = "";
