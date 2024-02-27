@@ -70,6 +70,7 @@
     neovim
     jetbrains-toolbox
     insomnia
+    popsicle
 
     # Langs
     nodejs_21
