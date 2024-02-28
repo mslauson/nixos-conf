@@ -30,7 +30,6 @@
   programs.zsh = (pkgs.callPackage ./programs/zsh.nix { }).programs.zsh;
   programs.tmux = (pkgs.callPackage ./programs/tmux.nix { }).programs.tmux;
   # The home.packages option allows you to install Nix packages into your
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   home.packages = with pkgs; [
     curl
     killall
@@ -75,12 +74,10 @@
 
     nixfmt
     golines
-    rnix-lsp
 
     bitwarden
     firefox
 
-    steam
     discord
     heroic
 
@@ -134,6 +131,7 @@
     EDITOR = "nvim";
     BROWSER = "firefox";
     TERMINAL = "kitty";
+    NIXOS_OZONE_WL = "1";
   };
 
 }
