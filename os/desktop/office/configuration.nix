@@ -13,6 +13,7 @@
     ../../services/yubikey.nix
   ];
 
+
   networking.hostName = "office";
 
 }
