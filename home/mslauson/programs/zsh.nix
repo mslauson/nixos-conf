@@ -3,6 +3,7 @@
     enable = true;
     # enableAutosuggestions = true;
     # enableCompletion = true;
+    # initExtra = "PATH=PATH:/home/mslauson/installs/custom-scripts";
     shellAliases = {
       rsrc = "source ~/.zshrc";
 

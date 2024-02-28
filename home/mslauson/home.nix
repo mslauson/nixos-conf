@@ -3,8 +3,15 @@
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  home.username = "mslauson";
-  home.homeDirectory = "/home/mslauson";
+  home = {
+    username = "mslauson";
+    homeDirectory = "/home/mslauson";
+    sessionPath = [
+      "/home/mslauson/installs/custom-scripts"
+      "/home/mslauson/installs/custom-scripts/computer"
+    ];
+  };
+
   manual.html.enable = true;
 
   home.stateVersion = "23.11";
@@ -36,6 +43,7 @@
     lshw
     gum
     xclip
+    wl-clipboard
     lolcat
     jq
     lazygit
