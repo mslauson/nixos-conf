@@ -10,7 +10,7 @@
     ../../common/index.nix
     ../../services/jellyfin.nix
     ../../common/users.nix
-    # ../../services/yubikey.nix
+    ../../services/yubikey.nix
   ];
 
   networking.hostName = "office";
