@@ -30,7 +30,7 @@
   programs.zsh = (pkgs.callPackage ./programs/zsh.nix { }).programs.zsh;
   programs.tmux = (pkgs.callPackage ./programs/tmux.nix { }).programs.tmux;
   # The home.packages option allows you to install Nix packages into your
-  # environment.
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   home.packages = with pkgs; [
     curl
     killall
@@ -57,12 +57,12 @@
     popsicle
     xfce.thunar
     gparted
+    thunderbird
 
     # Langs
     nodejs_21
     go
     jdk21
-    # cargo
     rustup
     gcc
 
