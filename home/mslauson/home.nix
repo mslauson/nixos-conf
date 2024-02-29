@@ -50,6 +50,10 @@
     lazydocker
     docker-compose
     yubikey-manager
+    musikcube
+    cava
+    wthrr
+    fortune
 
     #Wayland
     # wlogout

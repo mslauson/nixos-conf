@@ -61,6 +61,8 @@
     hyprpaper
     hyprdim
     waybar
+    bc
+    lm_sensors
     pam_u2f
     xdg-desktop-portal
     xdg-desktop-portal-gtk
