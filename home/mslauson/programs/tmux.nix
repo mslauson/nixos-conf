@@ -50,6 +50,10 @@
 
       # Set prefix key to Ctrl-a
       unbind-key C-b
+      unbind-key C-j
+      unbind-key C-k
+      unbind-key C-l
+      unbind-key C-h
       set-option -g prefix M-a
 
       # send the prefix to client inside window
