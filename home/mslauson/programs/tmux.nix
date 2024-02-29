@@ -69,7 +69,7 @@
 
 
       bind-key -r M-. new-window -c "#{window_current_path}"
-      bind-key -r M-, new-session-c "#{pane_current_path}"
+      bind-key -r M-, new-session -c "#{pane_current_path}"
       bind-key - split-window -v -c "#{pane_current_path}"
       bind-key c new-window -c "#{pane_current_path}"
       bind-key -r C-m move-window
