@@ -1,7 +1,7 @@
 { pkgs }: {
   programs.tmux = {
     enable = true;
-    newSession = true;
+    # newSession = true;
     mouse = true;
     plugins = with pkgs; [
       {
