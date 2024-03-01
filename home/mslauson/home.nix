@@ -55,6 +55,7 @@
     fortune
     tmux
     dunst
+    caffeine-ng
     neovim
 
     #Wayland
