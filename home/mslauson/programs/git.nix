@@ -8,6 +8,7 @@
     signing = { key = "3AB57AD2F78683DF9E9D0659EF6F329D8D6E51C5"; };
     aliases = {
       p = "pull";
+      pu = "push";
       st = "status";
       co = "checkout";
       br = "branch";
