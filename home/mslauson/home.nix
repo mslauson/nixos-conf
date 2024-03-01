@@ -39,7 +39,6 @@
   # The home.packages option allows you to install Nix packages into your
   home.packages = with pkgs; [
     curl
-    killall
     lshw
     gum
     xclip
@@ -55,19 +54,32 @@
     wthrr
     fortune
     tmux
+    dunst
+    neovim
 
     #Wayland
     # wlogout
 
+    hyprpaper
+    hyprdim
+    waybar
+    swayidle
+    sway-audio-idle-inhibit
+
+    #Rofi
+    rofi-wayland
+    rofi-vpn
+    rofi-top
+    rofi-calc
     ##Hyprland
 
-    neovim
     jetbrains-toolbox
     insomnia
     popsicle
     xfce.thunar
     gparted
     thunderbird
+    element-desktop
 
     # Langs
     nodejs_21

@@ -56,13 +56,8 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    rofi
+    killall
     firefox
-    hyprpaper
-    hyprdim
-    waybar
-    swayidle
-    sway-audio-idle-inhibit
     bc
     lm_sensors
     pam_u2f
