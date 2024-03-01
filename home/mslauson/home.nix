@@ -57,6 +57,7 @@
     dunst
     caffeine-ng
     neovim
+    notify-desktop
 
     #Wayland
     # wlogout
