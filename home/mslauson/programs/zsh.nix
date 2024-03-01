@@ -32,6 +32,8 @@
 
       nvNix = "pniConf && nvim .";
       nvNvim = "pneConf && nvim .";
+      nvWm = "pConf && cd wm-config && nvim .";
+      nvNotes = "cd ~/notes && nvim .";
 
       yubiNanoC = "gpg-connect-agent 'scd 24009623' 'learn --force' /bye";
       yubiNanoA = "gpg-connect-agent 'scd 22748289' 'learn --force' /bye";

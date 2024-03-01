@@ -65,8 +65,9 @@
     hyprpaper
     hyprdim
     waybar
-    swayidle
-    sway-audio-idle-inhibit
+    # swayidle
+    # sway-audio-idle-inhibit
+    swaylock
 
     #Rofi
     rofi-wayland
