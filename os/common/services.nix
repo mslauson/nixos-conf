@@ -5,7 +5,6 @@
       layout = "us";
       xkbVariant = "";
       excludePackages = [ pkgs.xterm ];
-      videoDrivers = [ "nvidia" ];
       libinput.enable = true;
       displayManager.gdm = {
         enable = true;
@@ -20,5 +19,4 @@
       gnome-keyring.enable = true;
     };
   };
-
 }

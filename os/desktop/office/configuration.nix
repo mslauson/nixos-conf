@@ -13,6 +13,7 @@
     ../../services/yubikey.nix
   ];
 
+  services.xserver.videoDrivers = [ "radeon" ];
 
   networking.hostName = "office";
 

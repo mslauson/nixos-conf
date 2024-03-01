@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
   # Enable OpenGL
   hardware.opengl = {
@@ -45,5 +44,6 @@
     };
 
   };
+  services.xserver.videoDrivers = [ "nvidia" ];
 }
 
