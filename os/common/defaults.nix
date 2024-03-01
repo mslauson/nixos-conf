@@ -61,6 +61,8 @@
     hyprpaper
     hyprdim
     waybar
+    swayidle
+    sway-audio-idle-inhibit
     bc
     lm_sensors
     pam_u2f

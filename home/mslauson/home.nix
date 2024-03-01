@@ -35,7 +35,7 @@
 
   programs.git = (pkgs.callPackage ./programs/git.nix { }).programs.git;
   programs.zsh = (pkgs.callPackage ./programs/zsh.nix { }).programs.zsh;
-  programs.tmux = (pkgs.callPackage ./programs/tmux.nix { }).programs.tmux;
+  # programs.tmux = (pkgs.callPackage ./programs/tmux.nix { }).programs.tmux;
   # The home.packages option allows you to install Nix packages into your
   home.packages = with pkgs; [
     curl
@@ -54,11 +54,10 @@
     cava
     wthrr
     fortune
+    tmux
 
     #Wayland
     # wlogout
-    swayidle
-    sway-audio-idle-inhibit
 
     ##Hyprland
 
