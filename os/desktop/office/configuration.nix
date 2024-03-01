@@ -10,10 +10,10 @@
     ../../common/index.nix
     ../../services/jellyfin.nix
     ../../common/users.nix
+    ../../common/gpu/radeon.nix
     ../../services/yubikey.nix
   ];
 
-  services.xserver.videoDrivers = [ "radeon" ];
 
   networking.hostName = "office";
 

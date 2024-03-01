@@ -7,6 +7,7 @@
 {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../common/gpu/nvidia.nix
     ../../common/index.nix
     ../../common/users.nix
     # ../../services/yubikey.nix
