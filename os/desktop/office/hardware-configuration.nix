@@ -4,31 +4,26 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "ahci" "usbhid" "uas" ];
+  boot.initrd.availableKernelModules =
+    [ "xhci_pci" "nvme" "ahci" "usbhid" "uas" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/924b3a0e-8a42-4c72-9535-763a5c12a64b";
-      fsType = "ext4";
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/924b3a0e-8a42-4c72-9535-763a5c12a64b";
+    fsType = "ext4";
+  };
 
-  boot.initrd.luks.devices."luks-518c04b0-eddb-45c5-a5e3-ec94802b6277".device = "/dev/disk/by-uuid/518c04b0-eddb-45c5-a5e3-ec94802b6277";
+  boot.initrd.luks.devices."luks-518c04b0-eddb-45c5-a5e3-ec94802b6277".device =
+    "/dev/disk/by-uuid/518c04b0-eddb-45c5-a5e3-ec94802b6277";
 
-  fileSystems."/mnt/media" =
-    { device = "systemd-1";
-      fsType = "autofs";
-    };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/55D3-64E8";
-      fsType = "vfat";
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/55D3-64E8";
+    fsType = "vfat";
+  };
 
   swapDevices = [ ];
 
@@ -42,5 +37,6 @@
   # networking.interfaces.wlp11s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode =
+    lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

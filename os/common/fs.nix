@@ -1,10 +1,10 @@
-{
+{ lib, ... }: {
 
   networking.hosts = { "10.7.5.60" = [ "gertrude" ]; };
 
   fileSystems."/mnt/media" = {
-    fsType = "nfs";
-    device = "gertrude:/mnt/liddy-tiddy/media";
+    fsType = lib.mkDefault "nfs";
+    device = lib.mkDefault "gertrude:/mnt/liddy-tiddy/media";
     options = [
       "_netdev"
       "noauto"
