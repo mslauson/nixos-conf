@@ -63,6 +63,27 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    tmux
+
+    #Wayland
+    # wlogout
+
+    hyprpaper
+    hyprdim
+    waybar
+    swayidle
+    sway-audio-idle-inhibit
+    swaylock
+    xwayland
+    xwaylandvideobridge
+
+    #Rofi
+    rofi-wayland
+    rofi-vpn
+    rofi-top
+    rofi-calc
+    ##Hyprland
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -59,25 +59,6 @@
     neovim
     notify-desktop
 
-    #Wayland
-    # wlogout
-
-    hyprpaper
-    hyprdim
-    waybar
-    swayidle
-    sway-audio-idle-inhibit
-    swaylock
-    xwayland
-    xwaylandvideobridge
-
-    #Rofi
-    rofi-wayland
-    rofi-vpn
-    rofi-top
-    rofi-calc
-    ##Hyprland
-
     jetbrains-toolbox
     insomnia
     popsicle
