@@ -49,11 +49,11 @@
       set -g set-titles on
 
       # Set prefix key to Ctrl-a
-      unbind-key C-b
-      unbind-key C-j
-      unbind-key C-k
-      unbind-key C-l
-      unbind-key C-h
+      unbind-key C-b 
+      bind-key C-j send-prefix
+      bind-key C-k send-prefix
+      bind-key C-l send-prefix
+      bind-key C-h send-prefix
       set-option -g prefix M-a
 
       # send the prefix to client inside window
