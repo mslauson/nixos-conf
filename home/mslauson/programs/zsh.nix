@@ -24,7 +24,7 @@
       pApiBu = "cd ~/projects/api/budget";
       pConf = "cd ~/projects/config";
       pniConf = "cd ~/projects/config/nixos-conf";
-      pneConf = "cd ~/projects/config/neovim-conf";
+      pneConf = "cd ~/projects/config/neovim-config";
       pLibs = "cd ~/projects/libs";
       pRest = "cd ~/projects/libs/rest";
       pUi = "cd ~/projects/ui";
